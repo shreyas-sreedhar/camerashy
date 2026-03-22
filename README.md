@@ -247,7 +247,7 @@ unsub();
 
 3. **Pre-emptive Cmd+Shift shield** — macOS swallows the digit keydown for system screenshots, so in `balanced` and `paranoid` modes content shields as soon as Cmd+Shift is held. `relaxed` skips this to reduce false positives.
 
-4. **Instant shield, smooth unshield** — Shield applies with no CSS transition (zero delay before the OS captures). Unshield animates smoothly via `transitionDuration`.
+4. **Instant shield, delayed unshield** — Shield applies with no CSS transition (zero delay before the OS captures). Unshield is held for 1200ms after keys are released so content stays hidden while the macOS screenshot preview UI is still visible, then animates back smoothly via `transitionDuration`.
 
 5. **Window blur heuristic** — If the window loses focus within 400ms of a modifier key press, it's likely a screenshot tool stealing focus. Only active in `paranoid` mode.
 
