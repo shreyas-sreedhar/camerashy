@@ -1,0 +1,99 @@
+{
+  "name": "camerashy",
+  "version": "0.1.0",
+  "description": "Lightweight screenshot detection and visual shielding for sensitive UI content. Framework-agnostic core with a React wrapper. Supports blur, color overlay, and content replacement modes.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "./core": {
+      "import": {
+        "types": "./dist/core.d.mts",
+        "default": "./dist/core.mjs"
+      },
+      "require": {
+        "types": "./dist/core.d.ts",
+        "default": "./dist/core.js"
+      }
+    },
+    "./react": {
+      "import": {
+        "types": "./dist/react.d.mts",
+        "default": "./dist/react.mjs"
+      },
+      "require": {
+        "types": "./dist/react.d.ts",
+        "default": "./dist/react.js"
+      }
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "prepublishOnly": "npm run build",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "camerashy",
+    "screenshot",
+    "protection",
+    "blur",
+    "privacy",
+    "shield",
+    "screen-capture",
+    "print-protection",
+    "sensitive-data",
+    "security",
+    "vanilla-js",
+    "framework-agnostic",
+    "react",
+    "nextjs",
+    "server-components"
+  ],
+  "author": "shreyas",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shreyas/camerashy"
+  },
+  "homepage": "https://github.com/shreyas/camerashy#readme",
+  "bugs": {
+    "url": "https://github.com/shreyas/camerashy/issues"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  }
+}
